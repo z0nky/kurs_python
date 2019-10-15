@@ -13,3 +13,11 @@ id = 0
 while id < len(names): #len(names) liczy ilość imion
     print("Hi ", names[id])
     id = id + 1
+
+#zadanie 2
+
+#zadanie 3
+
+#zadanie 4
+
+
