@@ -40,9 +40,8 @@ for i in range(1, 11):
 #zadanie 4
 #Napisz program, który wyświetli kolejne wyniki dla silni liczby naturalnej N (N podane przez użytkownika, ale nie większe niż 8).
 podaj = int(input("Podaj liczbę do 8: "))
+silnia = 1
 
-for s in range(0, podaj):
-    silnia = (s * (s + 1))
-    print(silnia, end="* ")
-
-#do dorobienia kek
+for s in range(1, podaj + 1):
+    silnia = silnia * s
+    print(silnia, end="*")
