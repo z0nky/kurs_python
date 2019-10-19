@@ -1,11 +1,12 @@
 # zadanie 1
-# Poproś użytkownika o podanie liczby. Sprawdź czy liczba podana przez użytkownika jest podzielna przez 3 bez reszty i wyświetl komunikat “liczba parzysta”.
+# Poproś użytkownika o podanie liczby. Sprawdź czy liczba podana przez użytkownika jest podzielna przez 3 bez reszty
+# i wyświetl komunikat “liczba parzysta”.
 numba = int(input('Input a number: '))
 rest = numba % 3
 if rest == 0:
     print('This a triple digit!')
 else:
-    print('This not a triple digit!')
+    print('This is not a triple digit!')
 
 # zadanie 2
 # Pobierz dwie liczby całkowite od użytkownika i oblicz ich sumę. Jeśli suma jest większa niż 100, wyświetl wynik, w przeciwnym wypadku wyświetl “Koniec”.
@@ -34,7 +35,8 @@ else:
     print('nie warta uwagi')
 
 # zadanie 4
-# Utwórz zmienną przechowującą dowolny ciąg znaków. Sprawdź czy utworzony string jest dłuższy niż 5 znaków oraz czy zawiera literę a. Jeśli zawiera, wszystkie litery a podmień na z i wyświetl powstały napis.
+# Utwórz zmienną przechowującą dowolny ciąg znaków. Sprawdź czy utworzony string jest dłuższy niż 5 znaków oraz czy zawiera literę a.
+# Jeśli zawiera, wszystkie litery a podmień na z i wyświetl powstały napis.
 randomstr = 'abcde1'
 afinder = randomstr.find('a')
 
@@ -71,4 +73,22 @@ else:
 
 #zadanie 7
 #Rozwiń kod bmi.py z pierwszych zajęć dodając teraz instrukcję warunkową, która wyświetli w zależności od wyniku: niedowaga / waga normalna / nadwaga / otyłość.
+
+weight = float(input('Podaj swoją wagę: '))
+height = float(input('Podaj swój wzrost: '))
+
+BMI = weight / pow(height, 2)
+
+if BMI < 18.50:
+    print('Twoje BMI to:', BMI, '- niedowaga.')
+elif BMI < 25:
+    print('Twoje BMI to:', BMI, '- normalna waga.')
+elif BMI < 30:
+    print('Twoje BMI to:', BMI, '- nadwaga.')
+elif BMI >= 30:
+    print('Twoje BMI to:', BMI, '- otyłość!')
+
+#zadanie 8
+#Sortowanie. Trzy dowolne liczby podane przez użytkownika zapisz do trzech zmiennych.
+# Znajdź największą liczbę. Wyświetl liczby od największej do najmniejszej.
 

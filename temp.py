@@ -1,5 +1,10 @@
-uno = (1, 2, 3, 5, 3)
+podaj = int(input("Podaj liczbę do 8: "))
+silnia = 1
 
-set(uno)
-
-print(uno)
+for s in range(1, podaj + 1):
+    silnia = silnia * s
+    if s == podaj:
+        print(s, '=', silnia)
+    else:
+        print(s, end=' * ')
+print('Silnia z', podaj, 'wynosi', silnia)

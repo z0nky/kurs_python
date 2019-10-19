@@ -39,7 +39,8 @@ for F in range(0, 200, 20):
     print(F, ' stopni Fahrenheita to ', C, ' stopni Celsjusza.')
 
 # zadanie 2
-# Napisz prostą grę, w której użytkownik musi zgadnąć liczbę od 0 - 20 ukrytą w programie (np. secret_num = 5). Pytaj użytkownika o podanie liczby tak długo, aż nie zgadnie.
+# Napisz prostą grę, w której użytkownik musi zgadnąć liczbę od 0 - 20 ukrytą w programie (np. secret_num = 5).
+# Pytaj użytkownika o podanie liczby tak długo, aż nie zgadnie.
 
 target = 7
 guess = int(input("Try to guess ze numba from range 0-20: "))

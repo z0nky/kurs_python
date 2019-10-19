@@ -4,12 +4,13 @@ for stp in text:
     print("-", stp)
 
 #zadanie 1
-#Stwórz listę przedmiotów, które zabierzesz na samotną wyprawę w góry. Wyświetl nazwę właśnie spakowanego przedmiotu, po ostatnim przedmiocie pokaż informację: “Great, we are ready!”
+#Stwórz listę przedmiotów, które zabierzesz na samotną wyprawę w góry.
+#Wyświetl nazwę właśnie spakowanego przedmiotu, po ostatnim przedmiocie pokaż informację: “Great, we are ready!”
 
 adventure = ['lina', 'siekiera', 'wifi']
 for a in adventure:
     print(a)
-print('rdy to go!')
+print('Great, we are ready!')
 
 #zadanie 2
 #Utwórz listę, która zawiera składniki na ulubione danie. Wyświetl komunikaty co należy pokolei dodać. Poza pętlą umieść pozostałe instrukcje np. “Wrzuć do pierkanika”, “Podawaj schłodzone”.
@@ -44,4 +45,8 @@ silnia = 1
 
 for s in range(1, podaj + 1):
     silnia = silnia * s
-    print(silnia, end="*")
+    if s == podaj:
+        print(s, '=', silnia)
+    else:
+        print(s, end=' * ')
+print('Silnia z', podaj, 'wynosi', silnia)
