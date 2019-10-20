@@ -8,6 +8,18 @@ print(mount)
 # zadanie 2
 #Pobierz od użytkownika 10 liczb, wyświetl tylko te, które są nieparzyste.
 
+numbers = input('Podaj 10 liczb oddzielonych spacją: ')
+numbers = numbers.split()
+output = []
+
+for dig in numbers:
+    if int(dig) % 2 == 0:
+        output.append(dig)
+        continue
+print(output)
+
+
+
 # zadanie 3
 #Dla podanej przez użytkownika liście liczb całkowitych sprawdź czy pierwszy i ostatni element są takie same.
 
@@ -55,6 +67,19 @@ while True:
 print(num_arr)
 
 # zadanie 4
+#Pobierz od użytkownika parzystą listę elementów. Sprawdź czy 2 środkowe elementy są takie same.
+
+evens = input('Wprowadź parzystą liczbę elementów, oddziel je przecinkiem: ')
+evens = evens.split(', ')
+
+ev1 = evens[len(evens) // 2 - 1]
+ev2 = evens[len(evens) // 2]
+
+if ev1 == ev2:
+    print('Środkowe wartości', ev1, ev2, 'są takie same!')
+else:
+    print('Środkowe wartości są różne!')
+
 
 # zadanie 5
 #Utwórz “na sztywno” 2-wymiarową tablicę, tak, by kolejne wiersze zawierały dane osób,
