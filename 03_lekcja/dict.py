@@ -53,3 +53,30 @@ dict_from_tuples = dict(tuples_to_dict)
 for key, value in dict_from_tuples.items():
     print(key, value)
 
+# zadanie 3
+# Utwórz dowolną tablicę n x n zawierającą dowolny znak,
+# a następnie wyświetl jej elementy w formie tabeli n x n. Elementy powinny być oddzielone spacją
+
+n = 3
+
+tab = [['-', '-', '-'],
+  ['-', '-', '-'],
+  ['-', '-', '-']]
+
+for rows in tab:
+    for dig in rows:
+        print(dig, end=' ')
+    print()
+
+# zadanie 4
+# Utworz tabliczkę mnożenia jako zagnieżdżoną listę o rozmiarze 10 x 10, wypełnioną wynikami mnożenia wiersz × kolumna.
+
+multi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+counting = 1
+
+for elem in multi:
+    for mini in range(1, 11):
+        print((mini * counting), end=' ')
+    print()
+    counting += 1
+
