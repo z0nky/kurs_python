@@ -51,6 +51,35 @@ def maximum_of():
     return number_list[-1]
 
 print(maximum_of())
+# wariant 'wspólny'
+
+def max_of_2(first, second):
+    return first if first > second else second
+
+
+def maximum_of(a, b, c):
+    #maxab = max_of_2(a, b)  #to też można przenieść w poniższą linię zamiast maxab wstawiając
+    max_abc = max_of_2(max_of_2(a, b), c)  #wykonywana jest zawsze funkcja 'najbardziej w środku'
+    return max_abc  #można jeszcze skompresować do "return max_of_2(max_of_2(a, b), c)
+
+    #maxab = a if a > b else b
+    #max_abc = maxab if maxab > c else c
+
+    #if a > b:
+    #   maxab = a
+    #else:
+    #    maxab = b
+    #if maxab > c:
+    #    max_abc = maxab
+    #else:
+    #    max_abc = c
+
+x = 3
+y = 8
+z = 2
+
+result = maximum_of(x, y, z)
+print(result)
 
 # zadanie 4
 # Napisz funkcję, która sprawdzi, czy liczba występuje w podanym przez użytkownika zakresie.
