@@ -11,15 +11,18 @@ for rows in board:
     print()
 
 
-player_m = input(str('Podaj komórkę, w którą zagrywasz krzyżyk: ')).upper()
+player_m = input('Podaj komórkę, w którą zagrywasz krzyżyk: ').upper()
 if len(player_m) != 2:
     print("\nYou need to tell me where you want to put cross!"
           "For example \"A1\" or \"C3\"")
-if not moves.index(player_m):
+if player_m in moves:
     moves.remove(player_m)
-    
+    first = player_m[0]
+    second = player_m[1]
+    print(first)
+    print(second)
 else:
     print('move not available')
 print(len(player_m))
 print(moves)
-print(board)
+#print(board)
