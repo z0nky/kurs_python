@@ -11,7 +11,7 @@ Project is created with:
 
 ## Setup
 To run this project just spray and pray:
-* Main menu - gives 4 options:
+* Main menu - gives 3 options:
 ```
 $ Show all records - view created records
 $ Add new record - allows user to add new records
