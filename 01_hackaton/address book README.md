@@ -1,5 +1,7 @@
 ## Table of contents
-* General info
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
 ## General info
 This project allows to view address book, add and remove records

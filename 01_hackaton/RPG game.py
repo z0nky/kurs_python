@@ -201,7 +201,7 @@ def epilogue():
     name = input("Tell me your name: ")
     destination = input("Tell me where did you travel: ")
     enemy = input("Tell me what incredible creature did you fight on your way: ")
-    sentence = (f"Brave {name.capitalize()} traveled to {destination.capitalize()}. " \
+    sentence = (f"Brave {name.capitalize()} traveled to {destination.capitalize()}. "
                f"Then {name.capitalize()} encountered scary {enemy}. {name.capitalize()} fought bravely, but in the "
                 f"end died gruesomely. \nTHE END")
     print(sentence)
