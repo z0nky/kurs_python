@@ -5,13 +5,9 @@
 # np: "(bohater) poszedł do (miejsce) aby (czasownik)." może stać się "Jouxdrien II Niemrawy poszedł do tawerny aby zasnąć."
 #- Historyjka ma mieć zadaną długość i ma być możliwie losowa.
 
-import random
-
-
-
 
 def start():
-    "Let's start"
+    print("Let's start")
     beginning_1()
 
 
@@ -21,11 +17,11 @@ def start():
 
 
 def no_way():
-    print("\n\nYou can't in this direction.", "\n" + 3 * "*", "\n")
+    print("\nYou can't in this direction.", "\n" + 3 * "*", "\n")
 
 
 def wrong_com():
-    print("\n\nUnknown command", "\n" + 3 * "*", "\n")
+    print("\nUnknown command", "\n" + 3 * "*", "\n")
 
 
 
@@ -45,6 +41,7 @@ def beginning_1():
         no_way()
         beginning_1()
     else:
+        print(f"I'm sorry, I don't understand what {choose.capitalize()} means :(")
         wrong_com()
         beginning_1()
 
@@ -64,6 +61,7 @@ def beginning_2():
     print(sentence)
     choose = input("What do you do?")
     if choose == l:
+        print(f"You {choose} around.\n")
         area_beg_2()
         beginning_2()
     elif choose == go_w or choose == go_e:
@@ -76,7 +74,9 @@ def beginning_2():
         print("\nYou travel north.\n")
         wood_entrance()
     else:
+        print(f"I'm sorry, I don't understand what {choose.capitalize()} means :(")
         wrong_com()
+        beginning_2()
 
 
 def area_beg_2():
@@ -104,7 +104,9 @@ def wood_entrance():
     elif choose == go_n:
         maze()
     else:
+        print(f"I'm sorry, I don't understand what {choose.upper()} means :(")
         wrong_com()
+        wood_entrance()
 
 
 def wood_en_ar():
@@ -130,9 +132,10 @@ def maze():
         stamina = stamina - 1
         print("You are getting exhausted. Your stamina:", stamina, "!")
         print("\n", "* * *", "\n")
-    print("Your stamina has reached critical level. You fall asleep and die of malnutrition! HAHAHA!")
-
-
+    death = input("Your stamina has reached critical level. \nYou fall asleep and die of malnutrition! HAHAHA! Anyway "
+                  "do you have any last words? ")
+    print(f"\nYou died in unknown woods. Your last words were: '{death}'. Too bad nobody heard it, right?")
+    epilogue()
 
 
 
@@ -155,16 +158,13 @@ def w1():
 
 
 def w2():
-    sentence = ("\nThe woods are dense, very dark. There are three routes:"
-                "\nNorth, West, East.")
+    sentence = ("\nThe woods are lighter, but still dark. There are three routes:"
+                "\nNorth, West, East, South.")
     print(sentence)
     choose = input("What do you do?")
-    if choose == go_e or choose == go_n or choose == go_w:
+    if choose == go_e or choose == go_n or choose == go_w or choose == go_s:
         print("You travel", choose, end=".")
         print(3 * "*")
-    elif choose == go_s:
-        no_way()
-        w2()
     elif choose == l:
         wood_look()
         w2()
@@ -189,11 +189,22 @@ def w3():
     else:
         wrong_com()
 
+
 def wood_look():
     print("\nWoods are dark, you can see sh.. well almost nothing."
           "\nYou can't hear any animals, there are no plants."
           "\n***")
 
+
+def epilogue():
+    print("\nAlright you probably wanted more epic story right?\n")
+    name = input("Tell me your name: ")
+    destination = input("Tell me where did you travel: ")
+    enemy = input("Tell me what incredible creature did you fight on your way: ")
+    sentence = (f"Brave {name.capitalize()} traveled to {destination.capitalize()}. " \
+               f"Then {name.capitalize()} encountered scary {enemy}. {name.capitalize()} fought bravely, but in the "
+                f"end died gruesomely. \nTHE END")
+    print(sentence)
 
 
 l = 'look'

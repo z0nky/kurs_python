@@ -18,7 +18,8 @@ def go_to_selection():
     elif go_to == '4':
         exit_the_program()
     else:
-        print('meh')
+        print('Please enter number from range 1-4. Is it that hard? :(')
+        go_to_selection()
 
 
 def show_all():
@@ -32,7 +33,7 @@ def show_all():
 def add_record():
     counter = input('How many records do you want to add?')
     if not counter.isdigit():
-        print('Ya have to gimme a number.')
+        print('Ya have to gimme a number!\n')
         againer = input('Do you want to try again? y/n')
         if againer == 'y':
             add_record()
