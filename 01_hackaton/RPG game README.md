@@ -21,3 +21,6 @@ To play the game you are required to add one of the commands:
 * east - allows player to travel east.
 * west - allows player to travel west.
 ```
+
+If player enters wrong command, the game will inform him and repeat last step.
+Also author does not care you can not win the game.

@@ -1,19 +1,11 @@
-### Historyjka a'la RPG:
-#- Konieczność użycia modułu `random`.
-#- Program wypisuje kolejne "przygody" bohatera.
-#- Przygody są zdefiniowanymi zdaniami, które będą losowo wypełniane odpowiednimi wyrazami,
-# np: "(bohater) poszedł do (miejsce) aby (czasownik)." może stać się "Jouxdrien II Niemrawy poszedł do tawerny aby zasnąć."
-#- Historyjka ma mieć zadaną długość i ma być możliwie losowa.
-
-
 def start():
     print("Let's start")
     beginning_1()
 
 
-#def choose():
-    #wut = input("What do you do?")
-    #return wut
+def choosing():
+    wut = input("What do you do?")
+    return wut
 
 
 def no_way():
@@ -24,13 +16,12 @@ def wrong_com():
     print("\nUnknown command", "\n" + 3 * "*", "\n")
 
 
-
 def beginning_1():
     sentence = ("\nYou woke up in the drop point. Wooden elevator is at the top of the cliff."
-    "\nYou remember vividly some guy who punched you in the face saying 'Welcome to the colony.'"
-    "\nYou slowly get up.")
+                "\nYou remember vividly some guy who punched you in the face saying 'Welcome to the colony.'"
+                "\nYou slowly get up.")
     print(sentence)
-    choose = input("What do you do?")
+    choose = choosing()
     if choose == l:
         area_beg_1()
         beginning_1()
@@ -47,9 +38,10 @@ def beginning_1():
 
 
 def area_beg_1():
-    plot = ("\n\nThe terrain is flat. Next to you stands wooden elevator, which is at the top of the cliff. There is nothing to call it down."
-            "\nThere is no way you can climb back, and even if you could, the barrier at the top would kill you."
-            "\nAt the north of the small valley you can see road, probably often used one.")
+    plot = (
+        "\n\nThe terrain is flat. Next to you stands wooden elevator, which is at the top of the cliff. There is nothing to call it down."
+        "\nThere is no way you can climb back, and even if you could, the barrier at the top would kill you."
+        "\nAt the north of the small valley you can see road, probably often used one.")
     print(plot)
     print(3 * "*")
 
@@ -138,7 +130,6 @@ def maze():
     epilogue()
 
 
-
 def w1():
     sentence = ("\nThe woods are dense, very dark. There are three routes:"
                 "\nNorth, West, East.")
@@ -202,7 +193,7 @@ def epilogue():
     destination = input("Tell me where did you travel: ")
     enemy = input("Tell me what incredible creature did you fight on your way: ")
     sentence = (f"Brave {name.capitalize()} traveled to {destination.capitalize()}. "
-               f"Then {name.capitalize()} encountered scary {enemy}. {name.capitalize()} fought bravely, but in the "
+                f"Then {name.capitalize()} encountered scary {enemy}. {name.capitalize()} fought bravely, but in the "
                 f"end died gruesomely. \nTHE END")
     print(sentence)
 
