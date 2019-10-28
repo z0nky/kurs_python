@@ -19,10 +19,26 @@ if player_m in moves:
     moves.remove(player_m)
     first = player_m[0]
     second = player_m[1]
-    print(first)
-    print(second)
+    #first = 1 if player_m[0] == 'A' else first = 2
+    if player_m[0] == 'A':
+        first = 1
+    elif player_m[0] == 'B':
+        first = 2
+    else:
+        first = 3
+    if player_m[1] == '1':
+        second = 1
+    elif player_m[1] == '2':
+        second = 2
+    else:
+        second = 3
+    #print(first, second)
+    board[first][second] = ' X '
 else:
     print('move not available')
-print(len(player_m))
+#print(len(player_m))
 print(moves)
-#print(board)
+for rows in board:
+    for val in rows:
+        print(val, end=' ')
+    print()
