@@ -7,7 +7,7 @@ with open(filename) as fopen:
     #content = [w.replace(', ', ' ') for w in content]
     content = [w.replace('\n', '') for w in content]
     for row in content:
-        dada = random.choice(row)
-    print(dada)
+        row.split(', ')
+
     #content = fopen.read().replace(', ', ' ').split()
 print(content)

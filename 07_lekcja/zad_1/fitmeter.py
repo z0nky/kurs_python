@@ -13,19 +13,19 @@ def get_advice():
     print(content)
 
 
-# def get_advice():
-#     if bmi.bmi_status(bmi.calc_bmi()) < 18.50:
-#         with open('niedowaga.txt', 'r') as fopen:
-#             return fopen.read()
-#     elif bmi.bmi_status(bmi.calc_bmi()) < 25:
-#         with open('normalna_waga.txt', 'r') as fopen:
-#             return fopen.read()
-#     elif bmi.bmi_status(bmi.calc_bmi()) < 30:
-#         with open('nadwaga.txt', 'r') as fopen:
-#             return fopen.read()
-#     else:
-#         with open('otyłość', 'r') as fopen:
-#             return fopen.read()
+def get_advice():
+    if bmi.bmi_status(bmi.calc_bmi()) < 18.50:
+        with open('niedowaga.txt', 'r') as fopen:
+            return fopen.read()
+    elif bmi.bmi_status(bmi.calc_bmi()) < 25:
+        with open('normalna_waga.txt', 'r') as fopen:
+            return fopen.read()
+    elif bmi.bmi_status(bmi.calc_bmi()) < 30:
+        with open('nadwaga.txt', 'r') as fopen:
+            return fopen.read()
+    else:
+        with open('otyłość', 'r') as fopen:
+            return fopen.read()
 
 if __name__ == '__main__':
     main()
