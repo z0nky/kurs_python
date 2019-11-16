@@ -1,0 +1,7 @@
+Name: Burzob
+Gender: female
+Race: Orc
+Gold: 100
+Weapons:
+Armors:
+Hit points: 10/10

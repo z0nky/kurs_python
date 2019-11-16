@@ -1,0 +1,7 @@
+Name: Rita
+Gender: female
+Race: Human
+Gold: 100
+Weapons:
+Armors:
+Hit points: 10/10
