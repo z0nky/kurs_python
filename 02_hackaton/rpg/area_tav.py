@@ -1,4 +1,4 @@
-import random
+import tavern_dice as td
 
 
 def vendor():
@@ -59,7 +59,7 @@ def enter_tav():
     if desti == "shop":
         vendor()
     elif desti == "dice":
-        pass
+        td.tawer_place()
     elif desti == "purse":
         print(f"{adventurer} has", purse, f"gold coins.")
         enter_tav()
@@ -71,14 +71,13 @@ def enter_tav():
 def open_eqfile_tav():
     filename = "eq.txt"
     global content, adventurer, purse, user_armor, user_weapon
-    with open(filename, 'r') as f:
+    with open(filename, 'r+') as f:
         content = f.readlines()
 
     adventurer = content[0].split()[1]
     purse = (content[3].split()[1])
     user_armor = (content[4].split(":")[1])
     user_armor = (content[5].split(":")[1])
-    # print(adventurer, purse)
     enter_tav()
 
 
