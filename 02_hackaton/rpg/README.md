@@ -17,7 +17,7 @@ First you create character. If you don't want to write your own name game has bu
 
 To play the game you are to write commands. They are usually highlighted in brackets for example:
 ```
-You arrived in small tavern. Here you can buy items, play dice for money or go adventuring. You can check your purse.
+You arrived in small tavern. You can check your purse, play dice or shop for items.
 What do you want to do? (dice/shop/purse)
 ```
 
