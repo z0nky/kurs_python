@@ -9,6 +9,8 @@ with open(filename, 'r') as f:
 
 adventurer = content[0].split()[1]
 purse = (content[3].split()[1])
+
+
 def forester():
     print(" Its take you 8 hours to got to the forest man, so your supply are diminish to half")
 
@@ -24,11 +26,13 @@ def forester():
         print(" Wrong answer, think one more time")
         forester()
 
+
 def roll_the_dice():
     cubes_wall = ['1', '2', '3', '4', '5', '6']
     dice_number = random.choice(cubes_wall)
     #print("You rolled the dice dropped out: ", dice_number)
     return dice_number
+
 
 def play():
     user_dice_number = roll_the_dice()
@@ -44,6 +48,7 @@ def play():
     else:
         winner = "0"
         return winner
+
 
 def gold_purse(money):
     global purse

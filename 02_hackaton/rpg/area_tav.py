@@ -59,6 +59,7 @@ def enter_tav():
     if desti == "shop":
         vendor()
     elif desti == "dice":
+        overwrite_file_tav()
         td.tawer_place()
     elif desti == "purse":
         print(f"{adventurer} has", purse, f"gold coins.")
@@ -69,16 +70,24 @@ def enter_tav():
 
 
 def open_eqfile_tav():
+    global filename, content, adventurer, purse, user_armor, user_weapon
     filename = "eq.txt"
-    global content, adventurer, purse, user_armor, user_weapon
     with open(filename, 'r+') as f:
         content = f.readlines()
 
     adventurer = content[0].split()[1]
     purse = (content[3].split()[1])
-    user_armor = (content[4].split(":")[1])
+    user_weapon = (content[4].split(":")[1])
     user_armor = (content[5].split(":")[1])
     enter_tav()
+
+# DO POPRAWY BO KASUJE CALA ZAWARTOSC
+def overwrite_file_tav():
+    global purse, content, user_weapon, user_armor
+    with open(filename, 'w') as f:
+        purse = content[3]
+        user_weapon = content[4]
+        user_armor = content[5]
 
 
 armor = {
