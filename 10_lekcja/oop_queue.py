@@ -3,7 +3,7 @@ class Queue:
     def __init__(self, elements):
         self.elements = elements
 
-    def __str__(self):
+    def __str__(self):  # nadpisuje informacje jeśli zrobimy print tylko obiektu klasy. Zamiast miejsca w pamieci bedzie wyswietlac to co return
         return "-".join(self.elements)
 
     # def show_queue(self):
