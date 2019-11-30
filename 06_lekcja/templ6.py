@@ -1,13 +1,11 @@
-# zadanie 8
 import random
-filename = 'sentence_generator.csv'
-with open(filename) as fopen:
-    # content = fopen.read()
-    content = fopen.readlines()
-    #content = [w.replace(', ', ' ') for w in content]
-    content = [w.replace('\n', '') for w in content]
-    for row in content:
-        row.split(', ')
 
-    #content = fopen.read().replace(', ', ' ').split()
-print(content)
+name_pool = [["Zygfryd", "Gerwazy", "Zawisza"],
+["Wrukag", "Zargulg", "Sunuguk"],
+["Methild", "Almon", "Elre"],
+["Anna", "Rita", "Yennefer"],
+["Grat", "Yazgash", "Burzob"],
+["Caeda", "Shenarah", "Ayda"]]
+
+print(random.choice(name_pool[0]))
+#random.randint(1)
