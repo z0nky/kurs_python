@@ -1,6 +1,7 @@
 import character
 import start_location
 import moving
+import city
 
 
 class Player:
@@ -9,6 +10,7 @@ class Player:
         self.life = 100
         self.weapon = 0
         self.money = 50
+        self.quest = 0
 
     def __str__(self):
         return f"{self.name} has {self.life} % life and {self.weapon} current weapon and {self.money} gold coins in pocket."
@@ -43,7 +45,8 @@ def main():
     if go_to == '1':
         start_game()
     elif go_to == '2':
-        pass
+        print("This feature is unavailable. Please pay 100€ for incoming DLC so I will input if asap!")
+        main()
     elif go_to == '3':
         exit_the_program()
     else:
@@ -59,13 +62,14 @@ def start_game():
     character.start_creator()
     player = Player(character.choosen_name)
     print(player)
-    first_choice = start_location.starting_path(player)
-    if first_choice == "city":
+    location = start_location.starting_path(player)
+    if location == "city":
         print(f"{player.name} will go to the city.")
-    elif first_choice == "river":
+        city.enter_the_city(player)
+    elif location == "river":
         print(f"{player.name} will go to the river.")
     print(player)
-    moving(first_choice)
+    city.city_direction(player)
 
 
 if __name__ == "__main__":

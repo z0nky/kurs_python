@@ -31,9 +31,9 @@ def starting_path(player):
         else:
             print("I see you are a coward!")
             print("THat hits your morale, but you proceed to the city scared of green psycho")
-            player.life = 90
+            player.life -= 10
             return "city"
     else:
         print('Please input one of presented options in bracket.')
-        starting_path()
+        starting_path(player)
 

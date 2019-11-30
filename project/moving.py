@@ -1,16 +1,10 @@
-
-
-def where_to_go(location):
-    if location == "city":
-        deep_city = input("You can go to the tavern or to the Order headquarters. You can also go back. (tavern/order/back): ")
-        if deep_city == "tavern":
-            pass
-        elif deep_city == "order":
-            pass
-        elif deep_city == "back":
-            pass
-        else:
-            print('')
-
-def deep_city(location_city):
-    if location_city
+def where_to_go():
+    print("City road leads towards river and mine. But you have spotted sign saying 'Mines closed.'. You can also stay in the city")
+    destination = input("Where will you travel? (river/stay) ")
+    if destination == "river":
+        return "river"
+    elif destination == "stay":
+        return "stay"
+    else:
+        print("Please input 'river' or 'stay'!")
+        where_to_go()
