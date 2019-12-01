@@ -8,28 +8,12 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.life = 100
-        self.weapon = 0
+        self.weapon = 100
         self.money = 50
         self.quest = 0
 
     def __str__(self):
         return f"{self.name} has {self.life} % life and {self.weapon} current weapon and {self.money} gold coins in pocket."
-
-    # dodawanie (ujemne) money
-    def wallet(self):
-        pass
-
-    # dodawanie weapon
-    def buy(self):
-        pass
-
-    # odejmowanie hp
-    def damage(self):
-        pass
-
-    # dodawanie hp
-    def heal(self):
-        pass
 
 
 def main_menu():

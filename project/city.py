@@ -2,6 +2,7 @@ import dice
 import moving
 import river
 
+
 def enter_the_city(player):
     print(f"{player.name} has arrived at  the City. \nYou can see small town. Most noticable buildings are tavern and order.")
 
@@ -123,6 +124,40 @@ def enter_the_order(player):
         print("Scribe: Then we have nothing to talk about for now. You can leave now")
         print("You do as he said.")
         city_direction(player)
+    elif player.quest == 2:
+        print("Scribe: Did you deal with troll already?")
+        print(f"{player.name}: Yes.")
+        print("Scribe: Do you have any proof?")
+        print(f"{player.name}: No, you didn't tell me I need to bring something. You can go there and check...")
+        print("Scribe: Ah I see. You are a scammer. Well then I'm sorry to say but you will have to get punished.")
+        print("You turn around and see knight in black armor entering the room. He has sword in hand and he instantly charges at you.")
+        ending_game(player)
+
+
+def ending_game(player):
+    opponent_life = 666
+    while player.life > 0 and opponent_life > 0:
+        if moving.end_game(player) == "Player win":
+            opponent_life -= player.weapon
+            print(
+                f"{player.name} hits Black Knight for {player.weapon} points! Black Knight has {opponent_life} hit points left.")
+        elif moving.end_game(player) == "Black Knight win":
+            player.life -= 10
+            print(f"{player.name} takes hit for 10 points. You have {player.life} hit points left.")
+        else:
+            print(moving.end_game(player))
+    if player.life == 0:
+        print("Oh no, you are dead! X_X")
+    elif opponent_life <= 0:
+        prize = dice.roll_dice() * 666
+        player.money += prize
+        print(f"{player.name} has killed Black Knight and found {prize} gold coins. "
+              f"Now {player.name} has {player.money} gold coins and {player.life}/100 hit points left.")
+        print(f"{player.name} feeling strong walks away from dead Black Knight.")
+        player.quest = 3
+        print(
+            f"Exhausted {player.name} goes to tavern to drink to death.")
+        print("You win? I made mistake then it shouldn't be possible!")
 
 
 def city_direction(player):
@@ -141,5 +176,3 @@ def city_direction(player):
     else:
         print("Please write 'tavern', 'order' or 'adventure'.")
         city_direction(player)
-
-
